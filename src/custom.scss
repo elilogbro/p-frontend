@@ -1,0 +1,136 @@
+// Override default variables before the import
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+.nav-link, .brand-link {
+    text-decoration: none;
+    color: white;
+}
+
+.brand-link {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.brand-link:hover {
+    color: white;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.brand-container {
+    background-color: #00C542;
+    color: white;
+    width: 5.25vw;
+    height: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    margin: 0;
+    text-align: center;
+    font-size: large;
+}
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-color: #0f1922;
+    overflow: auto;
+    color: white;
+}
+
+.mobile-routes-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.text-center {
+    text-align-last: start;
+    display: flex;
+}
+
+.routes-container {
+    height: 100%;
+    width: 100vw;
+    padding: 0;
+}
+
+.image {
+    width: auto;
+    height: 40vh;
+    box-shadow: 0.6vw 0 0 0px #6819fc, 1.4vw 0 0 0px #3e0f97, 2.2vw 0 0 0px #273038;
+    margin-right: 6vw;
+    margin-left: 8vw;
+    margin-top: 3vh;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: left;
+    font-family: 'Azeret Mono', monospace;
+    gap: 1vh;
+    width: fit-content;
+    padding-top: 12vh;
+}
+
+.icon {
+    color: #6819fc;
+    height: 3vh;
+    width: fit-content;
+    flex-basis: content;
+    min-width: 2vw;
+}
+
+.icon:hover {
+    height: 3.5vh;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.mobile-icon {
+    width: 12vw;
+    color:  white;
+    height: auto;
+    padding: 0.4vw;
+    margin: 1vw;
+    margin-top: 0.2vw;
+    margin-bottom: 0;
+}
+
+.navbar-mobile {
+    background-color: #0F1922;
+    height: 8vh;
+    width: 70vw; 
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    bottom: 0;
+    margin-bottom: 2vh;
+    position: fixed;
+    justify-content: center;
+    border-radius: 2em;
+    vertical-align: middle;
+    opacity: .92;
+}
+
+.logo, .github {
+    height: 5vh;
+    width: fit-content;
+    margin: 1.3vh;
+    flex-basis: content;
+    color: #919497;
+}
+
+.github:hover {
+    color: #6819fc;
+}
