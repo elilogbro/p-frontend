@@ -21,7 +21,7 @@ export const SubContainer2 = styled.div`
     flex-direction: row;
     display: flex;
     width: 100%:
-    padding-bottom: 2vh;
+    padding-bottom: 4vh;
     padding-top: 2vh;
 `;
 
