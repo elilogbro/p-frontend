@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 import { AiFillGithub } from 'react-icons/ai';
@@ -17,9 +17,9 @@ function Navigation() {
     const { isMobile } = useContext(IsMobileContext);
 
     if (isMobile) {
-        return <MobileNavigation/>;
+        return <MobileNavigation />;
     }
-    
+
     return (
         <Navbar>
             <BrandContainer>

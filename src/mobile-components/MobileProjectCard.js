@@ -13,36 +13,35 @@ import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
 
-function MobileProjectCard({project}) {
+function MobileProjectCard({ project }) {
 
-    const findLogo  = (technology) => {
+    const findLogo = (technology) => {
         switch (technology.name) {
             case 'React.js':
                 return <FaReact className="logo" />
-                break;
             case 'Ruby on Rails':
                 return <SiRubyonrails className="logo" />
-                break;
+            // break;
             case 'Custom db.json':
                 return <VscJson className="logo" />
-                break;
+            // break;
             case 'Ruby':
                 return <DiRuby className="logo" />
-                break;
+            // break;
             case 'Sinatra':
                 return <FaRedhat className="logo" />
-                break;
+            // break;
             case 'User Authentication':
                 return <FaCookieBite className="logo" />
-                break;
+            // break;
             case 'Styled Components':
                 return null
-                break;
+            // break;
             default:
                 return <p>{technology.name}</p>
         }
     }
-    
+
 
     const renderTechnologies = project && project.technologies.map(technology =>
         findLogo(technology)
@@ -55,17 +54,17 @@ function MobileProjectCard({project}) {
                 {renderTechnologies}
             </SubContainer2>
             <SubContainer>
-                <h2 style={{fontFamily: 'Azeret Mono, monospace', color: '#6819fc'}}>
+                <h2 style={{ fontFamily: 'Azeret Mono, monospace', color: '#6819fc' }}>
                     <Typewriter
                         onInit={(typewriter) => {
                             typewriter.typeString(project.name)
-                            .start();
+                                .start();
                         }}
                     />
                 </h2>
-                <p style={{fontFamily: 'Roboto Condensed, sans-serif'}}>{project.details}</p>
+                <p style={{ fontFamily: 'Roboto Condensed, sans-serif' }}>{project.details}</p>
                 <a href={project.github_url}>
-                    <AiFillGithub className="icon" style={{width: '40vw', height: '8vh'}}/>
+                    <AiFillGithub className="icon" style={{ width: '40vw', height: '8vh' }} />
                 </a>
             </SubContainer>
         </Container>
