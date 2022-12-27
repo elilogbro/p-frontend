@@ -5,6 +5,7 @@ import {
 } from '../styles/DropdownStyles';
 import { ImArrowRight } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 function Dropdown() {
     let navigate = useNavigate();
@@ -15,21 +16,38 @@ function Dropdown() {
 
     return (
         <Container>
-            <List>
-                <ListItem onClick={redirectToResume}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
-                <a
-                    href={'/resume.pdf'}
-                    download="EliottBrownResume"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{
-                        textDecoration: 'none',
-                        color: 'black'
-                    }}
-                >
-                    <ListItem><ImArrowRight style={{ marginRight: '1vw' }} />Download</ListItem>
-                </a>
-            </List>
+            {isMobile ?
+                <List>
+                    <a
+                        href={'/resume.pdf'}
+                        download="EliottBrownResume"
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}
+                    >
+                        <ListItem><ImArrowRight style={{ marginRight: '1vw' }} />Download</ListItem>
+                    </a>
+                </List>
+                :
+                <List>
+                    <ListItem onClick={redirectToResume}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
+                    <a
+                        href={'/resume.pdf'}
+                        download="EliottBrownResume"
+                        target="_blank"
+                        rel="noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}
+                    >
+                        <ListItem><ImArrowRight style={{ marginRight: '1vw' }} />Download</ListItem>
+                    </a>
+                </List>
+            }
         </Container>
     )
 }
