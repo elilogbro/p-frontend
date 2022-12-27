@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import IFrame from './IFrame';
 import {
@@ -8,7 +7,7 @@ import {
     LinkContainer,
     IconContainer
 } from '../styles/ProjectCardStyles';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 import MobileProjectCard from '../mobile-components/MobileProjectCard';
 import { FaReact } from 'react-icons/fa';
 import { SiRubyonrails } from 'react-icons/si';
@@ -19,8 +18,6 @@ import { FaCookieBite } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
 
 function ProjectCard({ project }) {
-
-    const { isMobile } = useContext(IsMobileContext);
 
     if (isMobile) {
         return <MobileProjectCard project={project} />

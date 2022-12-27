@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import {
     Container
 } from '../styles/ProjectsContainerStyles';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 import MobileProjectsContainer from '../mobile-components/MobileProjectsContainer';
 
 function ProjectsContainer() {
-
-    const { isMobile } = useContext(IsMobileContext);
 
     let location = useLocation();
     const [projects, setProjects] = useState(null);

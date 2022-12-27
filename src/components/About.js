@@ -1,25 +1,22 @@
-import { useContext } from 'react';
 import {
     Image,
     Container,
     Header,
     SubContainer
 } from '../styles/AboutStyles';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 import MobileAbout from '../mobile-components/MobileAbout';
 
 function About() {
 
-    const { isMobile } = useContext(IsMobileContext);
-
     if (isMobile) {
         return <MobileAbout />
     }
-    
+
     return (
         <Container>
             <Header>
-                <h3 style={{color: "#6819fc"}}><strong>Who is Eliott Brown?</strong></h3>
+                <h3 style={{ color: "#6819fc" }}><strong>Who is Eliott Brown?</strong></h3>
                 <p>A curious Full Stack Software Engineer who is passionate about the Frontend and is constantly trying to further himself.</p>
             </Header>
             <SubContainer>

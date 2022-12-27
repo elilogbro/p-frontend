@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {
     Container,
@@ -14,12 +14,10 @@ import {
     Link
 } from '../styles/ContactInfoStyles';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 import MobileContactInfo from '../mobile-components/MobileContactInfo';
 
 function ContactInfo() {
-
-    const { isMobile } = useContext(IsMobileContext);
 
     const initialFormData = {
         from_name: "",

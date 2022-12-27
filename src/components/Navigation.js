@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillMediumCircle } from 'react-icons/ai';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 import {
     BrandContainer,
     NavContainer,
@@ -13,8 +12,6 @@ import {
 } from '../styles/NavigationStyles';
 
 function Navigation() {
-
-    const { isMobile } = useContext(IsMobileContext);
 
     if (isMobile) {
         return <MobileNavigation />;

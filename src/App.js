@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import ContactInfo from './components/ContactInfo';
@@ -6,11 +6,9 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import ProjectsContainer from './components/ProjectsContainer';
 import Container from 'react-bootstrap/Container';
-import { IsMobileContext } from './context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 
 function App() {
-
-  const { isMobile } = useContext(IsMobileContext);
 
   return (
     <div className="app-container">

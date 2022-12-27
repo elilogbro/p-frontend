@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import {
     Container
 } from '../styles/ProjectCardStyles';
-import { IsMobileContext } from '../context/IsMobileContext';
+import { isMobile } from 'react-device-detect';
 
 function IFrame({ project }) {
-
-    const { isMobile } = useContext(IsMobileContext);
 
     return (
         <Container>
