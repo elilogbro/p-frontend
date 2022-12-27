@@ -14,13 +14,9 @@ function ProjectsContainer() {
     let location = useLocation();
     const [projects, setProjects] = useState(null);
 
-    const url = 'https://fierce-tundra-23591.herokuapp.com/projects'
-
     useEffect(() => {
 
-        fetch(`${url}`, {
-            mode: 'no-cors'
-        })
+        fetch("https://fierce-tundra-23591.herokuapp.com/projects")
             .then(res => res.json())
             .then(projects => setProjects(projects))
     }, [location]
