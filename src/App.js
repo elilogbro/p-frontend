@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Video from './components/Video';
 import ContactInfo from './components/ContactInfo';
 import Navigation from './components/Navigation';
 import About from './components/About';
