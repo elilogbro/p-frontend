@@ -14,14 +14,16 @@ function ProjectsContainer() {
     let location = useLocation();
     const [projects, setProjects] = useState(null);
 
+    const url = 'https://fierce-tundra-23591.herokuapp.com/projects'
+
     useEffect(() => {
 
-        fetch('https://fierce-tundra-23591.herokuapp.com/projects', {
+        fetch(`/cors-proxy/${url}`, {
             method: "GET",
             mode: 'cors',
             headers: {}
         })
-            .then(res => res.json())
+            .then(res => res.text())
             .then(projects => setProjects(projects))
     }, [location]
     )
