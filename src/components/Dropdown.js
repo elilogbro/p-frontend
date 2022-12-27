@@ -1,38 +1,22 @@
-import React, { useState } from 'react';
 import {
     Container,
     List,
-    ListItem,
-    ModalContainer
+    ListItem
 } from '../styles/DropdownStyles';
-import { Button } from '../styles/HomeStyles';
-import Popup from 'reactjs-popup';
 import { ImArrowRight } from 'react-icons/im';
+import { useNavigate } from 'react-router-dom';
 
-function Dropdown({ mobile }) {
+function Dropdown() {
+    let navigate = useNavigate();
 
-    const [open, setOpen] = useState(false);
+    const redirectToResume = () => {
+        navigate('/resume');
+    };
 
     return (
         <Container>
             <List>
-                <ListItem onClick={() => setOpen(true)}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
-                <Popup
-                    open={open}
-                    // modal
-                    nested
-                >
-                    <ModalContainer>
-                        <Button
-                            modal="true"
-                            onClick={() => setOpen(false)}
-                        >
-                            X
-                        </Button>
-                        <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
-                        </object>
-                    </ModalContainer>
-                </Popup>
+                <ListItem onClick={redirectToResume}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
                 <a
                     href={'/resume.pdf'}
                     download="EliottBrownResume"

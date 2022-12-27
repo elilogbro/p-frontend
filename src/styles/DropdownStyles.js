@@ -23,13 +23,6 @@ export const ListItem = styled.li`
     }
 `;
 
-export const ModalContainer = styled.div`
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    margin-top: 4vh;
-`;
-
 export const Row = styled.div`
     justify-content: center;
 `;

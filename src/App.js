@@ -7,6 +7,7 @@ import About from './components/About';
 import ProjectsContainer from './components/ProjectsContainer';
 import Container from 'react-bootstrap/Container';
 import { isMobile } from 'react-device-detect';
+import Resume from './components/Resume';
 
 function App() {
 
@@ -15,19 +16,13 @@ function App() {
       <Navigation />
       <Container className={isMobile ? "mobile-routes-container" : "routes-container"}>
         <Routes>
-          <Route
-            path='/'
-            element={
-              <Home />
-            }
-          />
+          <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<ContactInfo />} />
+          <Route path='/projects' element={<ProjectsContainer />} />
           <Route
-            path='/projects'
-            element={
-              <ProjectsContainer />
-            }
+            path="/resume"
+            element={<Resume />}
           />
         </Routes>
       </Container>

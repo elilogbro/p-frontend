@@ -40,7 +40,7 @@ function Home() {
                         <Button onClick={handleButtonClick}>
                             Resume <HiViewList style={{ verticalAlign: 'top' }} />
                         </Button>
-                        {clicked && <Dropdown mobile="false" />}
+                        {clicked && <Dropdown />}
                     </LinksContainer>
                 </Col>
             </Col>
