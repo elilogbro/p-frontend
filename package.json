@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://fierce-tundra-23591.herokuapp.com",
+  "proxy": "https://fierce-tundra-23591.herokuapp.com",
   "dependencies": {
     "bootstrap": "^5.2.3",
     "emailjs-com": "^3.2.0",

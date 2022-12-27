@@ -12,10 +12,10 @@ import { IsMobileContext } from './context/IsMobileContext';
 function App() {
 
   const { isMobile } = useContext(IsMobileContext);
-  
+
   return (
     <div className="app-container">
-      <Navigation/>
+      <Navigation />
       <Container className={isMobile ? "mobile-routes-container" : "routes-container"}>
         <Routes>
           <Route
@@ -25,7 +25,6 @@ function App() {
             }
           />
           <Route path='/about' element={<About />} />
-          <Route path='/projects/:project_id/video' element={<Video />} />
           <Route path='/contact' element={<ContactInfo />} />
           <Route
             path='/projects'
