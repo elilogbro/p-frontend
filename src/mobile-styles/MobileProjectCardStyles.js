@@ -20,7 +20,7 @@ export const SubContainer = styled.div`
 export const SubContainer2 = styled.div`
     flex-direction: row;
     display: flex;
-    width: fit-content:
+    width: 100vw:
     height: auto;
     padding-bottom: 4vh;
     padding-top: 2vh;
