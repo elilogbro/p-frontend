@@ -16,7 +16,11 @@ function ProjectsContainer() {
 
     useEffect(() => {
 
-        fetch('https://fierce-tundra-23591.herokuapp.com/projects')
+        fetch('https://fierce-tundra-23591.herokuapp.com/projects', {
+            method: "GET",
+            mode: 'cors',
+            headers: {}
+        })
             .then(res => res.json())
             .then(projects => setProjects(projects))
     }, [location]
