@@ -18,12 +18,8 @@ function ProjectsContainer() {
 
     useEffect(() => {
 
-        fetch(`/cors-proxy/${url}`, {
-            method: "GET",
-            mode: 'cors',
-            headers: {}
-        })
-            .then(res => res.text())
+        fetch(`${url}`)
+            .then(res => res.json())
             .then(projects => setProjects(projects))
     }, [location]
     )
