@@ -3,26 +3,25 @@ import {
     Container,
     List,
     ListItem,
-    ModalContainer,
-    TextContainer
+    ModalContainer
 } from '../styles/DropdownStyles';
 import { Button } from '../styles/HomeStyles';
 import Popup from 'reactjs-popup';
 import { ImArrowRight } from 'react-icons/im';
 
-function Dropdown({mobile}) {
+function Dropdown({ mobile }) {
 
     const [open, setOpen] = useState(false);
 
     return (
         <Container>
             <List>
-                <ListItem onClick={() => setOpen(true)}><ImArrowRight style={{marginRight: '1vw'}}/>View</ListItem>
+                <ListItem onClick={() => setOpen(true)}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
                 <Popup
                     open={open}
                     // modal
                     nested
-                    >
+                >
                     <ModalContainer>
                         <Button
                             modal="true"
@@ -30,14 +29,8 @@ function Dropdown({mobile}) {
                         >
                             X
                         </Button>
-                        {mobile ?
-                            <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
-                                <TextContainer>
-                                    <p style={{width: 'fit-content', fontSize: 'large'}}>Unable to load on your mobile device, use <a href="https://www.linkedin.com/in/eli-in-tech/overlay/1635508967519/single-media-viewer/">this link!</a></p>
-                                </TextContainer>
-                            </object> :
-                            <div></div>
-                        }
+                        <object data={'/resume.pdf'} type="application/pdf" width="100%" height="100%">
+                        </object>
                     </ModalContainer>
                 </Popup>
                 <a
@@ -50,7 +43,7 @@ function Dropdown({mobile}) {
                         color: 'black'
                     }}
                 >
-                    <ListItem><ImArrowRight style={{marginRight: '1vw'}}/>Download</ListItem>
+                    <ListItem><ImArrowRight style={{ marginRight: '1vw' }} />Download</ListItem>
                 </a>
             </List>
         </Container>
