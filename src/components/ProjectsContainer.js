@@ -18,7 +18,9 @@ function ProjectsContainer() {
 
     useEffect(() => {
 
-        fetch(`${url}`)
+        fetch(`${url}`, {
+            mode: 'no-cors'
+        })
             .then(res => res.json())
             .then(projects => setProjects(projects))
     }, [location]
