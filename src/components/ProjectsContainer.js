@@ -10,25 +10,25 @@ import MobileProjectsContainer from '../mobile-components/MobileProjectsContaine
 function ProjectsContainer() {
 
     const { isMobile } = useContext(IsMobileContext);
-    
+
     let location = useLocation();
     const [projects, setProjects] = useState(null);
-    
+
     useEffect(() => {
 
-        fetch('/projects')
+        fetch('https://fierce-tundra-23591.herokuapp.com/projects')
             .then(res => res.json())
             .then(projects => setProjects(projects))
-        }, [location]
+    }, [location]
     )
-        
+
     if (isMobile) {
         return (<MobileProjectsContainer projects={projects} />)
     }
 
     const renderProjects = projects && projects.map(project =>
-            <ProjectCard key={project.id} project={project} />
-        )
+        <ProjectCard key={project.id} project={project} />
+    )
 
     return (
         <Container>
