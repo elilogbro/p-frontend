@@ -21,22 +21,16 @@ function MobileProjectCard({ project }) {
                 return <FaReact className="logo" />
             case 'Ruby on Rails':
                 return <SiRubyonrails className="logo" />
-            // break;
             case 'Custom db.json':
                 return <VscJson className="logo" />
-            // break;
             case 'Ruby':
                 return <DiRuby className="logo" />
-            // break;
             case 'Sinatra':
                 return <FaRedhat className="logo" />
-            // break;
             case 'User Authentication':
                 return <FaCookieBite className="logo" />
-            // break;
             case 'Styled Components':
                 return null
-            // break;
             default:
                 return <p>{technology.name}</p>
         }
