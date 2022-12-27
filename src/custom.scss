@@ -2,7 +2,8 @@
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
 
-.nav-link, .brand-link {
+.nav-link,
+.brand-link {
     text-decoration: none;
     color: white;
 }
@@ -97,7 +98,7 @@
 
 .mobile-icon {
     width: 12vw;
-    color:  white;
+    color: white;
     height: auto;
     padding: 0.4vw;
     margin: 1vw;
@@ -108,7 +109,7 @@
 .navbar-mobile {
     background-color: #0F1922;
     height: 8vh;
-    width: 70vw; 
+    width: 70vw;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -123,8 +124,9 @@
     opacity: .92;
 }
 
-.logo, .github {
-    height: 5vh;
+.logo,
+.github {
+    height: 10vh;
     width: fit-content;
     margin: 1.3vh;
     flex-basis: content;
