@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillMediumCircle } from 'react-icons/ai';
-import { HiViewList } from 'react-icons/hi';
-import Dropdown from '../components/Dropdown';
+import { BsDownload } from 'react-icons/bs';
 import {
     Button
 } from '../styles/HomeStyles';
@@ -17,12 +15,6 @@ import {
 
 function MobileHome() {
 
-    const [clicked, setClicked] = useState(false);
-
-    const handleButtonClick = () => {
-        setClicked(!clicked)
-    }
-
     return (
         <Container>
             <Image
@@ -30,14 +22,24 @@ function MobileHome() {
                 alt="me"
             />
             <Row>
-                <h3><strong>Hi there! I'm <span style={{color: "#6819fc"}}>Eliott</span></strong> Brown</h3>
-                <h4 style={{color: '#919497', fontFamily: 'Roboto Condensed, sans-serif'}}>A <strong><span style={{color: "#6819fc"}}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</h4>
+                <h3><strong>Hi there! I'm <span style={{ color: "#6819fc" }}>Eliott</span></strong> Brown</h3>
+                <h4 style={{ color: '#919497', fontFamily: 'Roboto Condensed, sans-serif' }}>A <strong><span style={{ color: "#6819fc" }}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</h4>
                 <LinksContainer>
                     <Column>
-                        <Button onClick={handleButtonClick} mobile="true">
-                            Resume <HiViewList style={{verticalAlign: 'sub'}}/>
-                        </Button>
-                        {clicked && <Dropdown mobile="true"/>}
+                        <a
+                            href={'/resume.pdf'}
+                            download="EliottBrownResume"
+                            target="_blank"
+                            rel="noreferrer"
+                            style={{
+                                textDecoration: 'none',
+                                color: 'black'
+                            }}
+                        >
+                            <Button mobile="true">
+                                Resume <BsDownload style={{ verticalAlign: 'bottom' }} />
+                            </Button>
+                        </a>
                     </Column>
                     <Column>
                         <a href="https://github.com/elilogbro">

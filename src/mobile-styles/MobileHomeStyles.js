@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-flow: column;
-    height: 110vh;
+    height: 100vh;
     text-align: center;
     margin-top: 10vh;
 `;
@@ -12,7 +12,7 @@ export const LinksContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    min-height: 20vh;
+    align-items: baseline;
 `;
 
 export const Row = styled.div`

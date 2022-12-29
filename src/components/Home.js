@@ -13,7 +13,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function Home() {
 
-    const isMobile = useMediaQuery('(max-width: 912px)');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     const [clicked, setClicked] = useState(false);
 

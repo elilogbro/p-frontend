@@ -6,7 +6,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function IFrame({ project }) {
 
-    const isMobile = useMediaQuery('(max-width: 912px)');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     return (
         <Container>

@@ -19,7 +19,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function ContactInfo() {
 
-    const isMobile = useMediaQuery('(max-width: 912px)');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     const initialFormData = {
         from_name: "",

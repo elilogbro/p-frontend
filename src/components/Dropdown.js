@@ -9,7 +9,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function Dropdown() {
 
-    const isMobile = useMediaQuery('(max-width: 912px)');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     let navigate = useNavigate();
 
@@ -19,22 +19,7 @@ function Dropdown() {
 
     return (
         <Container>
-            {isMobile ?
-                <List>
-                    <a
-                        href={'/resume.pdf'}
-                        download="EliottBrownResume"
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            color: 'black'
-                        }}
-                    >
-                        <ListItem><ImArrowRight style={{ marginRight: '1vw' }} />Download</ListItem>
-                    </a>
-                </List>
-                :
+            {!isMobile &&
                 <List>
                     <ListItem onClick={redirectToResume}><ImArrowRight style={{ marginRight: '1vw' }} />View</ListItem>
                     <a

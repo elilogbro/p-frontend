@@ -36,7 +36,7 @@ export const Button = styled.button`
     font-weight: 700;
     text-align: center;
     vertical-align: middle;
-    padding: ${props => props.mobile ? "1vw 2vw" : "10px 14px"};
+    padding: ${props => props.mobile ? "1vw 6vw" : "10px 14px"};
     color: #0f1922;
     background-color: white;
     height: 48px;

@@ -19,7 +19,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function ProjectCard({ project }) {
 
-    const isMobile = useMediaQuery('(max-width: 912px)');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
     if (isMobile) {
         return <MobileProjectCard project={project} />
