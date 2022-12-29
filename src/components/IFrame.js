@@ -1,7 +1,6 @@
 import {
     Container
 } from '../styles/ProjectCardStyles';
-import { isMobile } from 'react-device-detect';
 
 function IFrame({ project }) {
 

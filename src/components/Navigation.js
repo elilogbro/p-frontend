@@ -3,15 +3,17 @@ import MobileNavigation from '../mobile-components/MobileNavigation';
 import { AiFillGithub } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { AiFillMediumCircle } from 'react-icons/ai';
-import { isMobile } from 'react-device-detect';
 import {
     BrandContainer,
     NavContainer,
     MediaContainer,
     Navbar
 } from '../styles/NavigationStyles';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function Navigation() {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     if (isMobile) {
         return <MobileNavigation />;

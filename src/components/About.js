@@ -4,10 +4,12 @@ import {
     Header,
     SubContainer
 } from '../styles/AboutStyles';
-import { isMobile } from 'react-device-detect';
 import MobileAbout from '../mobile-components/MobileAbout';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function About() {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     if (isMobile) {
         return <MobileAbout />

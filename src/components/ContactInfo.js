@@ -14,10 +14,12 @@ import {
     Link
 } from '../styles/ContactInfoStyles';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { isMobile } from 'react-device-detect';
 import MobileContactInfo from '../mobile-components/MobileContactInfo';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function ContactInfo() {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     const initialFormData = {
         from_name: "",

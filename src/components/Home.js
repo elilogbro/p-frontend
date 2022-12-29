@@ -9,9 +9,11 @@ import {
     Button
 } from '../styles/HomeStyles';
 import MobileHome from '../mobile-components/MobileHome';
-import { isMobile } from 'react-device-detect';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function Home() {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     const [clicked, setClicked] = useState(false);
 

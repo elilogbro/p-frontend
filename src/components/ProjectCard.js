@@ -7,7 +7,6 @@ import {
     LinkContainer,
     IconContainer
 } from '../styles/ProjectCardStyles';
-import { isMobile } from 'react-device-detect';
 import MobileProjectCard from '../mobile-components/MobileProjectCard';
 import { FaReact } from 'react-icons/fa';
 import { SiRubyonrails } from 'react-icons/si';
@@ -16,8 +15,11 @@ import { DiRuby } from 'react-icons/di';
 import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
+import useMediaQuery from './hooks/useMediaQuery';
 
 function ProjectCard({ project }) {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
 
     if (isMobile) {
         return <MobileProjectCard project={project} />

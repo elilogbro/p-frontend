@@ -5,9 +5,12 @@ import {
 } from '../styles/DropdownStyles';
 import { ImArrowRight } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import { isMobile } from 'react-device-detect';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function Dropdown() {
+
+    const isMobile = useMediaQuery('(max-width: 767px)');
+
     let navigate = useNavigate();
 
     const redirectToResume = () => {

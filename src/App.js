@@ -6,10 +6,12 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import ProjectsContainer from './components/ProjectsContainer';
 import Container from 'react-bootstrap/Container';
-import { isMobile } from 'react-device-detect';
 import Resume from './components/Resume';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function App() {
+
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   return (
     <div className="app-container">

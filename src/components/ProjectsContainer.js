@@ -4,12 +4,15 @@ import ProjectCard from './ProjectCard';
 import {
     Container
 } from '../styles/ProjectsContainerStyles';
-import { isMobile } from 'react-device-detect';
 import MobileProjectsContainer from '../mobile-components/MobileProjectsContainer';
+import useMediaQuery from './hooks/useMediaQuery';
 
 function ProjectsContainer() {
 
+    const isMobile = useMediaQuery('(max-width: 767px)');
+
     let location = useLocation();
+
     const [projects, setProjects] = useState(null);
 
     useEffect(() => {
