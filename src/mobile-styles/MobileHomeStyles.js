@@ -6,6 +6,8 @@ export const Container = styled.div`
     height: 100vh;
     text-align: center;
     margin-top: 10vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
 `;
 
 export const LinksContainer = styled.div`
