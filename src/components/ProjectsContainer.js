@@ -5,11 +5,11 @@ import {
     Container
 } from '../styles/ProjectsContainerStyles';
 import MobileProjectsContainer from '../mobile-components/MobileProjectsContainer';
-import useMediaQuery from './hooks/useMediaQuery';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function ProjectsContainer() {
 
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     let location = useLocation();
 

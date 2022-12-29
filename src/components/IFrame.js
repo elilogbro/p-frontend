@@ -1,8 +1,12 @@
 import {
     Container
 } from '../styles/ProjectCardStyles';
+import useMediaQuery from '../hooks/useMediaQuery';
+
 
 function IFrame({ project }) {
+
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     return (
         <Container>

@@ -9,11 +9,11 @@ import {
     MediaContainer,
     Navbar
 } from '../styles/NavigationStyles';
-import useMediaQuery from './hooks/useMediaQuery';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function Navigation() {
 
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     if (isMobile) {
         return <MobileNavigation />;

@@ -5,11 +5,11 @@ import {
 } from '../styles/DropdownStyles';
 import { ImArrowRight } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import useMediaQuery from './hooks/useMediaQuery';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function Dropdown() {
 
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     let navigate = useNavigate();
 

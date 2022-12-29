@@ -9,11 +9,11 @@ import {
     Button
 } from '../styles/HomeStyles';
 import MobileHome from '../mobile-components/MobileHome';
-import useMediaQuery from './hooks/useMediaQuery';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function Home() {
 
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     const [clicked, setClicked] = useState(false);
 

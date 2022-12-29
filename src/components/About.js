@@ -5,11 +5,11 @@ import {
     SubContainer
 } from '../styles/AboutStyles';
 import MobileAbout from '../mobile-components/MobileAbout';
-import useMediaQuery from './hooks/useMediaQuery';
+import useMediaQuery from '../hooks/useMediaQuery';
 
 function About() {
 
-    const isMobile = useMediaQuery('(max-width: 767px)');
+    const isMobile = useMediaQuery('(max-width: 912px)');
 
     if (isMobile) {
         return <MobileAbout />
