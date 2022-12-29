@@ -33,12 +33,13 @@ export const SubContainer = styled.div`
     font-size: x-large;
     width: 100vw;
     text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
 `;
 
 export const Details = styled.div`
     display: flex;
     flex-direction: column;
-    width: 98%;
     gap: 3vh;
     color: #919497;
 `;
