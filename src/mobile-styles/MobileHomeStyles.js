@@ -5,7 +5,7 @@ export const Container = styled.div`
     flex-flow: column;
     height: 100vh;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 4vh;
     padding-left: 4vw;
     padding-right: 4vw;
 `;
