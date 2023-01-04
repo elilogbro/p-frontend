@@ -9,7 +9,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function About() {
 
-    const isMobile = useMediaQuery('(max-width: 800px)');
+    const isMobile = useMediaQuery('(max-width: 780px)');
 
     if (isMobile) {
         return <MobileAbout />

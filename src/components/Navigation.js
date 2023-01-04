@@ -13,7 +13,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function Navigation() {
 
-    const isMobile = useMediaQuery('(max-width: 800px)');
+    const isMobile = useMediaQuery('(max-width: 780px)');
 
     if (isMobile) {
         return <MobileNavigation />;

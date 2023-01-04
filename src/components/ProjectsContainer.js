@@ -9,7 +9,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function ProjectsContainer() {
 
-    const isMobile = useMediaQuery('(max-width: 800px)');
+    const isMobile = useMediaQuery('(max-width: 780px)');
 
     let location = useLocation();
 
