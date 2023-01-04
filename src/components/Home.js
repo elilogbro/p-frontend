@@ -37,7 +37,7 @@ function Home() {
                 />
                 <Col className="details-container">
                     <h3><strong>Hi there! I'm <span style={{ color: "#6819fc" }}>Eliott</span></strong> Brown</h3>
-                    <h4 style={{ color: '#919497', fontFamily: 'Roboto Condensed, sans-serif' }}>A <strong><span style={{ color: "#6819fc" }}>Full-Stack Software Engineer</span></strong> passionate about creating unique software solutions</h4>
+                    <h4 style={{ color: '#919497', fontFamily: 'Roboto Condensed, sans-serif' }}>A <strong><span style={{ color: "#6819fc" }}>Full-Stack Software Developer</span></strong> passionate about creating unique software solutions</h4>
                     <LinksContainer>
                         <Button onClick={handleButtonClick}>
                             Resume <HiViewList style={{ verticalAlign: 'top' }} />
