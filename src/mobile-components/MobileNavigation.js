@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { BiHome } from 'react-icons/bi';
 import { MdOutlinePersonOutline } from 'react-icons/md';
 import { AiOutlineAppstore } from 'react-icons/ai';
-import { AiOutlinePhone } from 'react-icons/ai';
+import { FiMail } from 'react-icons/fi';
 
 function MobileNavigation() {
 
@@ -55,7 +55,7 @@ function MobileNavigation() {
             <Nav.Item>
                 <LinkContainer to="/contact">
                     <Nav.Link>
-                        <AiOutlinePhone
+                        <FiMail
                             style={{
                                 color: 'white',
                                 height: '10vh',
