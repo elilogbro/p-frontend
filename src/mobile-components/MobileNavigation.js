@@ -58,8 +58,8 @@ function MobileNavigation() {
                         <FiMail
                             style={{
                                 color: 'white',
-                                height: '10vh',
-                                width: '10vw',
+                                height: '8vh',
+                                width: '9vw',
                                 margin: '2vw'
                             }}
                         />
