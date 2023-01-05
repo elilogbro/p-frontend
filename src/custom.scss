@@ -79,6 +79,14 @@
     }
 }
 
+@media only screen and (orientation: landscape) {
+    .image {
+        width: auto;
+        height: 50vh;
+        margin-left: 2vw;
+    }
+}
+
 .details-container {
     display: flex;
     flex-direction: column;
@@ -96,6 +104,16 @@
     width: fit-content;
     flex-basis: content;
     min-width: 2vw;
+}
+
+@media only screen and (max-width: 1000px) and (orientation: landscape) {
+    .icon {
+        height: 6vh;
+        width: auto;
+        flex-basis: content;
+        min-width: 2vw;
+        margin-right: 1.5vw;
+    }
 }
 
 .icon:hover {

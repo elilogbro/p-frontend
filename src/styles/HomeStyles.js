@@ -12,7 +12,7 @@ export const LinksContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: left;
-    min-height: 20vh;
+    min-height: 30vh;
     font-family: 'Roboto Condensed', sans-serif;
 `;
 
