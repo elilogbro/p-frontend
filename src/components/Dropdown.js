@@ -9,7 +9,7 @@ import useMediaQuery from '../hooks/useMediaQuery';
 
 function Dropdown() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
 
     let navigate = useNavigate();
 

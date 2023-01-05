@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
 import { HiViewList } from 'react-icons/hi';
@@ -10,10 +10,12 @@ import {
 } from '../styles/HomeStyles';
 import MobileHome from '../mobile-components/MobileHome';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function Home() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
     const [clicked, setClicked] = useState(false);
 
@@ -21,7 +23,7 @@ function Home() {
         setClicked(!clicked)
     }
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return <MobileHome />
     }
 

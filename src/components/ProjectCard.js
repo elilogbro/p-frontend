@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import IFrame from './IFrame';
 import {
@@ -16,12 +17,14 @@ import { FaRedhat } from 'react-icons/fa';
 import { FaCookieBite } from 'react-icons/fa';
 import Typewriter from "typewriter-effect";
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function ProjectCard({ project }) {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return <MobileProjectCard project={project} />
     }
 

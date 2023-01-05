@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import MobileNavigation from '../mobile-components/MobileNavigation';
 import { AiFillGithub } from 'react-icons/ai';
@@ -10,12 +11,14 @@ import {
     Navbar
 } from '../styles/NavigationStyles';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function Navigation() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return <MobileNavigation />;
     }
 

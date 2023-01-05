@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import {
@@ -6,10 +6,12 @@ import {
 } from '../styles/ProjectsContainerStyles';
 import MobileProjectsContainer from '../mobile-components/MobileProjectsContainer';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function ProjectsContainer() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
     let location = useLocation();
 
@@ -23,7 +25,7 @@ function ProjectsContainer() {
     }, [location]
     )
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return (<MobileProjectsContainer projects={projects} />)
     }
 

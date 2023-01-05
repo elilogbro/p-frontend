@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import emailjs from 'emailjs-com';
 import {
     Container,
@@ -16,10 +16,12 @@ import {
 import { MdOutlineMailOutline } from 'react-icons/md';
 import MobileContactInfo from '../mobile-components/MobileContactInfo';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function ContactInfo() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
     const initialFormData = {
         from_name: "",
@@ -36,7 +38,7 @@ function ContactInfo() {
     const [formData, setFormData] = useState(initialFormData);
     const [errorLocation, setErrorLocation] = useState(falsyFormData);
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return <MobileContactInfo />
     }
 

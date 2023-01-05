@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import {
     Image,
     Container,
@@ -6,12 +7,14 @@ import {
 } from '../styles/AboutStyles';
 import MobileAbout from '../mobile-components/MobileAbout';
 import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function About() {
 
-    const isMobile = useMediaQuery('(max-width: 780px)');
+    const isMobile = useMediaQuery('(max-width: 480px)');
+    const { landscape } = useContext(LandscapeContext);
 
-    if (isMobile) {
+    if (isMobile && !landscape) {
         return <MobileAbout />
     }
 

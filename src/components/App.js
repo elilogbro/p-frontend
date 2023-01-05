@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import ContactInfo from './components/ContactInfo';
-import Navigation from './components/Navigation';
-import About from './components/About';
-import ProjectsContainer from './components/ProjectsContainer';
+import Home from './Home';
+import ContactInfo from './ContactInfo';
+import Navigation from './Navigation';
+import About from './About';
+import ProjectsContainer from './ProjectsContainer';
 import Container from 'react-bootstrap/Container';
-import Resume from './components/Resume';
-import useMediaQuery from './hooks/useMediaQuery';
+import Resume from './Resume';
+import useMediaQuery from '../hooks/useMediaQuery';
+import { LandscapeContext } from '../context/LandscapeContext';
 
 function App() {
 
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery('(max-width: 480px)');
+  const { landscape } = useContext(LandscapeContext);
 
   return (
     <div className="app-container">
       <Navigation />
-      <Container className={isMobile ? "mobile-routes-container" : "routes-container"}>
+      <Container className={(isMobile && !landscape) ? "mobile-routes-container" : "routes-container"}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />

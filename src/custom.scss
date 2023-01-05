@@ -71,6 +71,14 @@
     margin-top: 3vh;
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 540px) {
+    .image {
+        height: 30vh;
+        width: auto;
+        margin-left: 2vw;
+    }
+}
+
 .details-container {
     display: flex;
     flex-direction: column;
